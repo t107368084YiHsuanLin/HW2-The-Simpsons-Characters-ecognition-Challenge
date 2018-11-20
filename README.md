@@ -205,6 +205,6 @@ predator.save_weights('/home/t107368084/hw2/simpsons.hdf5')
 
 ## kaggle排名
 
-![image](https://github.com/t107368084YiHsuanLin/HW2-The-Simpsons-Characters-ecognition-Challenge/blob/master/kaggle.jpg)
+![image](https://github.com/t107368084YiHsuanLin/HW2-The-Simpsons-Characters-ecognition-Challenge/blob/master/KAGGLE.jpg)
 
 
