@@ -20,48 +20,63 @@ second HW of machine learning
 -------------------
 1.匯入相關所需的模組
 from tensorflow.keras.models import Sequential
+
 from tensorflow.keras.layers import Conv2D
+
 from tensorflow.keras.layers import MaxPooling2D
+
 from tensorflow.keras.layers import Flatten
+
 from tensorflow.keras.layers import Dense
+
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
+
 from tensorflow.keras.callbacks import LearningRateScheduler, ModelCheckpoint
+
 from timeit import default_timer as timer
+
 from keras.preprocessing import image
+
 import numpy as np
+
 import os
+
 from PIL import Image
+
 from keras.models import load_model
+
 import pandas as pd
+
 
 2.將圖像大小調整為128
 image_height = 128
+
 image_width = 128
 
 3.初始化CNN 建立一個含有6層的卷積層的網路
 predator = Sequential()
-# 第一層
+ 1.第一層
 predator.add(Conv2D(32, (3, 3), activation="relu", input_shape=(image_height, image_width, 3)))
 predator.add(MaxPooling2D(pool_size = (2, 2)))
-# 添加第二層
+ 2.添加第二層
 predator.add(Conv2D(64, (3, 3), activation="relu"))
 predator.add(MaxPooling2D(pool_size = (2, 2)))
-# 添加第三層
+ 3.添加第三層
 predator.add(Conv2D(128, (3, 3), activation="relu"))
 predator.add(MaxPooling2D(pool_size = (2, 2)))
-# 添加第四層
+ 4.添加第四層
 predator.add(Conv2D(256, (3, 3), activation="relu"))
 predator.add(MaxPooling2D(pool_size = (2, 2)))
-# 添加第五及六層
+ 5.添加第五及六層
 predator.add(Conv2D(128, (3, 3), activation="relu"))
 predator.add(Conv2D(64, (3, 3), activation="relu"))
 predator.add(MaxPooling2D(pool_size = (2, 2)))
-# 將3D圖像展開成單行陣列
+ 6.將3D圖像展開成單行陣列
 predator.add(Flatten())    
-# Full connection
+ 7.Full connection
 predator.add(Dense(units=32, activation="relu"))
 predator.add(Dense(units=20, activation="softmax"))   #輸出層有20個神經元 每個神經元代表一個角色
-# 編譯CNN並且展示model架構
+ 8.編譯CNN並且展示model架構
 predator.compile(optimizer = 'adam', loss = 'categorical_crossentropy', metrics = ['accuracy'])
 predator.summary()
 
