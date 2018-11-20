@@ -195,9 +195,16 @@ df.to_csv('/home/t107368084/hw2/predictions.csv')
 predator.save_weights('/home/t107368084/hw2/simpsons.hdf5')
 
 ## 模型架構
+![image](https://github.com/t107368084YiHsuanLin/HW2-The-Simpsons-Characters-ecognition-Challenge/blob/master/model1.jpg)
+
+![image](https://github.com/t107368084YiHsuanLin/HW2-The-Simpsons-Characters-ecognition-Challenge/blob/master/model2.jpg)
 
 ## 訓練過程
 
+![image](https://github.com/t107368084YiHsuanLin/HW2-The-Simpsons-Characters-ecognition-Challenge/blob/master/train.jpg)
+
 ## kaggle排名
+
+![image](https://github.com/t107368084YiHsuanLin/HW2-The-Simpsons-Characters-ecognition-Challenge/blob/master/kaggle.jpg)
 
 
